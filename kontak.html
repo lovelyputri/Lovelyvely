@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="loading">
+        <div class="scene">
+            <div class="book" id="book">
+                <div class="book_cover"></div>
+                <div class="book_pages"></div>
+                <div class="book_cover book_cover--back"></div>
+            </div>
+            <p class="loading-text" id="loadingText">Membuka Buku...</p>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <img class="logo" src="img/logo lyboo.png" alt="logo lyboo">
+            <a class="navbar-brand">Lyboo Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="collapse navbar-collapse" id="navbarNav"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">index</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profil.html">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produk.html">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="katalog.html">Katalog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kontak.html">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <div class="book-form-container">
+            <div class="book-form">
+                <i class="fas fa-book-open form-decoration decoration-1"></i>
+                <i class="fas fa-pen-fancy form-decoration decoration-2"></i>
+
+                <div class="form-page">
+                    <div class="form-header">
+                        <h2>Tulis Pesan Untuk Kami</h2>
+                        <p class="text-muted">Isi formulir berikut dan kami akan segera merespon</p>
+                    </div>
+
+                    <form id="creativeContactForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <label for="creativeName" class="form-label">
+                                    <i class="fas fa-user"></i> Nama Lengkap
+                                </label>
+                                <input type="text" class="form-control" id="creativeName" 
+                                        minlength="5" maxlength="20" required>
+                                <div class="invalid-feedback">
+                                    Nama harus 5-20 karakter.
+                                </div>
+                                <div class="valid-feedback">
+                                    Nama Valid!!
+                                </div>
+                                <div class="char-counter">
+                                    <span id="nameCounter">0</span>/20 Karakter
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <label for="creativeEmail" class="form-label">
+                                    <i class="fas fa-envelope"></i> Alamat Email
+                                </label>
+                                <input type="email" class="form-control" id="creativeEmail" required>
+                                <div class="invalid-feedback">
+                                    Masukkan email yang valid
+                                </div>
+                                <div class="valid-feedback">
+                                    Email Valid!!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="creativeSubject" class="form-label">
+                                <i class="fas fa-tag"></i> Pesan
+                            </label>
+                            <select id="creativeSubject" class="form-select" required>
+                                <option value="" selected disabled>Pilih subject pesan....</option>
+                                <option value="Pertanyaan">Pertanyaan Produk</option>
+                                <option value="pemesanan">Pemesanan Buku</option>
+                                <option value="saran">Saran/Kritik</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Silahkan pilih subject pesan
+                            </div>
+                        <div></div>
+                        <div class="message-genre mb-4">
+                            <label class="form-label"><i class="fas fa-bookmark"></i>Genre Pesan Anda</label>
+                            <div class="genre-options">
+                                <input type="radio" name="genre" id="pengembangan">
+                                <label for="pengembangan">Pengembangan Diri</label>
+                            
+                                <input type="radio" name="genre" id="sejarah" checked>
+                                <label for="sejarah">Sejarah</label>
+                           
+                                <input type="radio" name="genre" id="psikologi" checked>
+                                <label for="psikologi">Psikologi</label>
+                          
+                                <input type="radio" name="genre" id="romansa" checked>
+                                <label for="romansa">Romansa</label>
+                          
+                                <input type="radio" name="genre" id="hukum" checked>
+                                <label for="hukum">Hukum</label>
+                
+                                <input type="radio" name="genre" id="spiritual" checked>
+                                <label for="spiritual">Spiritual</label>
+    
+                                <input type="radio" name="genre" id="superanatural" checked>
+                                <label for="superanatural">Superanatural Horor</label>
+
+                                <input type="radio" name="genre" id="none" checked>
+                                <label for="none">None</label>
+                            </div>
+                        </div>   
+                        <div class="mb-4">
+                            <label for="creativeMessage" class="form-label">
+                                <i class="fas fa-comment-alt"></i> Isi pesan
+                            </label>
+                            <textarea class="form-control" id="creativeMessage" rows="4"
+                                      minlength="10" maxlength="500" required></textarea>
+                            <div class="invalid-feedback">
+                                pesan harus 10-500 karakter.
+                            </div>
+                            <div class="char-counter">
+                                <span id="messageCounter">0</span>/500 karakter
+                            </div>
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="creativeMemberShip">
+                            <label class="form-check-label" for="creativeMemberShip">
+                                Saya ingin menjadi MemberShip Lyboo Store
+                            </label>
+                        </div>
+
+                        <button class="submit-btn">
+                            Kirim Pesan <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form> 
+                </div>
+            </div>
+        </div>
+        <div class="container my-5">
+
+            <div class="map-text-section">
+                <div class="map-text-content">
+                    <h3>Lokasi Toko Kami</h3>
+                    <p>LybooStore berlokasi di pusat kota, dan tentunya mudah dijangkau dari mana saja. Kunjungi toko kami untuk merasakan pengalaman berbelanja buku yang berbeda dengan tempat literasi yang hangat dan nyaman</p>
+
+                    <ul class="store-hours">
+                        <li><span>Senin-Jumat:</span> <span>08.00-18.00 WIB</span></li>
+                        <li><span>Sabtu:</span> <span>08.00-16.00 WIB</span></li>
+                        <li><span>Minggu:</span> <span>10.00-15.00 WIB</span></li>
+                    </ul>
+
+                    <p>Kami menyediakan area baca yang nyaman, free wifi, dan promo khusus untuk pengunjung toko</p>
+                </div>
+
+                <div class="map-container-side">
+                    <div class="map-title-side">
+                        <i class="fas fa-map-marker-alt"></i> Lyboo Store
+                    </div>
+                    <div class="map-overlay-side"></div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.96769577013!2d2.2646331368145223!3d48.858825541743975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sid!4v1749823741833!5m2!1sen!2sid" 
+                            allowfullscreen="" loading="lazy"></iframe>
+                </div>      
+            </div>
+   
+    </div>
+
+        <div class="contact-methods">
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h5>Kunjungi Kami</h5>
+                <p>Rue de l'Abreuvoir, distrik Montmartre<br> Paris, Prancis.</p>
+                <a href="https://www.google.com/maps/place/Rue+de+l'Abreuvoir,+75018+Paris,+France/@48.8882424,2.3363691,17z/data=!3m1!4b1!4m6!3m5!1s0x47e66e5b1c3fa7cb:0xbfa735ac809360bd!8m2!3d48.8882424!4d2.338944!16s%2Fg%2F1210xqdx?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D" class="btn btn-sm btn-pink">Lihat Peta</a>
+            </div>
+
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h5>Telepon Kami</h5>
+                <p>+62 838 4526 4043 <br>09.00-17.00 WIB</p>
+                <a href="https://web.whatsapp.com" class="btn btn-sm btn-pink">Hubungi Sekarang</a>
+            </div>
+
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h5>Email Kami</h5>
+                <p>info@lyboostore.com <br>Support@lybooo.com</p>
+                <a href="maito:info@lyboostore" class="btn btn-sm btn-pink">Kirim Email</a>
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+    <footer class="lyboo-footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <img src="img/logo lyboo.png" alt="Lyboo Store" class="footer-logo">
+                    <p>Membaca adalah investasi terbaik untuk masa depan</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Tentang Kami</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="profil.html">Profil</a></li>
+                        <li><a href="produk.html">Produk</a></li>
+                        <li><a href="katalog.html">Katalog</a></li>
+                        <li><a href="kontak.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                      <h4>Hubungi Kami</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i><span>@Lyboo_Store</span></a>
+                        <a href="https://www.facebook.com/?locale=id_ID"><i class="fab fa-facebook-f"></i><span>Official Lyboo Store</span></a>
+                        <a href="https://www.whatsapp.com/?lang=id"><i class="fab fa-whatsapp"></i><span>+62 838 4526 4043</span></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Membership</h4>
+                    <form class="membership-form" id="membershipForm">
+                        <input type="email" placeholder="Masukkan Email Anda" required>
+                        <input type="password" placeholder="Masukkan Pasword Anda" required>
+                        <button type="submit">Join <i class="fas fa-paper-plane"></i></button>
+                        <div class="form-message"></div>
+                    </form>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fab fa-cc-apple-pay"></i>
+                    </div>
+                    <p>&Copy; 2022 Lyboo Store. Semua hak dilindungi undang-undang.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

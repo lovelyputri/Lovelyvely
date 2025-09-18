@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="loading">
+        <div class="scene">
+            <div class="book" id="book">
+                <div class="book_cover"></div>
+                <div class="book_pages"></div>
+                <div class="book_cover book_cover--back"></div>
+            </div>
+            <p class="loading-text" id="loadingText">Membuka Buku...</p>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <img class="logo" src="img/logo lyboo.png" alt="logo lyboo">
+            <a class="navbar-brand">Lyboo Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="collapse navbar-collapse" id="navbarNav"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">index</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profil.html">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produk.html">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="katalog.html">Katalog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kontak.html">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h4 class="text4">List Buku Lyboo Bookstore</h4>
+    <div class="table-responsive"></div>
+        <table class="table table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th>No</th>
+                    <th style="width: 80px;">Cover</th>
+                    <th>Judul Buku</th>
+                    <th>Kategori</th>
+                    <th>Harga</th>
+                    <th>Stok</th>
+                    <th>Rating</th>
+                    <th style="width: 100px;">Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="nomer">1</td>
+                    <td data-label="cover" class="cover">
+                        <img src="img/buku 00.jpeg" alt="buku00" class="book-cover img-fluid">
+                    </td>
+                    <td data-label="Judul Buku">
+                        <div class="book-title">Psikologi Feminin</div>
+                        <div class="book-author">Karem Horney. K.M</div>
+                    </td>
+                    <td data-label="Kategori">
+                        <span>Psikologi</span>
+                    </td>
+                    <td data-label="Harga" class="price">Rp.88.900</td>
+                    <td data-label="Stok">
+                        <span class="badge bg-success text-dark stock-badge">Tersedia</span>
+                    </td>
+                    <td data-label="Rating">
+                        <span class="rating">★★★★☆</span>
+                        <span class="d-none d-md-inline">(4.7)</span>
+                    </td>
+                    <td data-label="Aksi">
+                        <a href="kontak.html">
+                            <button class="btn btn-sm btn-lyboo">
+                                <i class="fas fa-cart-plus"></i> <span class="d-none d-md-inline">Beli</span>
+                            </button>
+                        </a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nomer">2</td>
+                    <td data-label="cover" class="cover">
+                        <img src="img/buku 1.jpg" alt="buku1" class="book-cover img-fluid">
+                    </td>
+                    <td data-label="Judul Buku">
+                        <div class="book-title">Cantik itu Luka</div>
+                        <div class="book-author">Eka Kurniawan</div>
+                    </td>
+                    <td data-label="Kategori">
+                        <span>Pengembangan Diri</span>
+                    </td>
+                    <td data-label="Harga" class="price">Rp.180.000</td>
+                    <td data-label="Stok">
+                        <span class="badge bg-warning text-dark stock-badge">Terbatas</span>
+                    </td>
+                    <td data-label="Rating">
+                        <span class="rating"> ★★★★★</span>
+                        <span class="d-none d-md-inline">(5.0)</span>
+                    </td>
+                    <td data-label="Aksi">
+                        <a href="kontak.html">
+                            <button class="btn btn-sm btn-lyboo">
+                                <i class="fas fa-cart-plus"></i> <span class="d-none d-md-inline">Beli</span>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nomer">3</td>
+                    <td data-label="cover" class="cover">
+                        <img src="img/buku 21.jpg" alt="buku1" class="book-cover img-fluid">
+                    </td>
+                    <td data-label="Judul Buku">
+                        <div class="book-title">Kisah Tanah Jawa</div>
+                        <div class="book-author">Bonaventura D.Genta</div>
+                    </td>
+                    <td data-label="Kategori">
+                        <span>Superanatural Horor</span>
+                    </td>
+                    <td data-label="Harga" class="price">Rp.65.000</td>
+                    <td data-label="Stok">
+                        <span class="badge bg-warning text-dark stock-badge">Terbatas</span>
+                    </td>
+                    <td data-label="Rating">
+                        <span class="rating">★★★☆☆</span>
+                        <span class="d-none d-md-inline">(3.9)</span>
+                    </td>
+                    <td data-label="Aksi">
+                        <a href="kontak.html">
+                            <button class="btn btn-sm btn-lyboo">
+                                <i class="fas fa-cart-plus"></i> <span class="d-none d-md-inline">Beli</span>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nomer">4</td>
+                    <td data-label="cover" class="cover">
+                        <img src="img/buku 13.jpg" alt="buku1" class="book-cover img-fluid">
+                    </td>
+                    <td data-label="Judul Buku">
+                        <div class="book-title">Anatomy od a murder </div>
+                        <div class="book-author">John D. Voelker</div>
+                    </td>
+                    <td data-label="Kategori">
+                        <span>Hukum</span>
+                    </td>
+                    <td data-label="Harga" class="price">Rp.145.500</td>
+                    <td data-label="Stok">
+                        <span class="badge bg-warning text-dark stock-badge">Terbatas</span>
+                    </td>
+                    <td data-label="Rating">
+                        <span class="rating"> ★★★★☆</span>
+                        <span class="d-none d-md-inline">(4.7)</span>
+                    </td>
+                    <td data-label="Aksi">
+                        <a href="kontak.html">
+                            <button class="btn btn-sm btn-lyboo">
+                                <i class="fas fa-cart-plus"></i> <span class="d-none d-md-inline">Beli</span>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nomer">5</td>
+                    <td data-label="cover" class="cover">
+                        <img src="img/buku 10.jpeg" alt="buku1" class="book-cover img-fluid">
+                    </td>
+                    <td data-label="Judul Buku">
+                        <div class="book-title">The art of choosing</div>
+                        <div class="book-author">Sheena lyengar</div>
+                    </td>
+                    <td data-label="Kategori">
+                        <span>Psikologi</span>
+                    </td>
+                    <td data-label="Harga" class="price">Rp 97.700</td>
+                    <td data-label="Stok">
+                        <span class="badge bg-success text-dark stock-badge">Tersedia</span>
+                    </td>
+                    <td data-label="Rating">
+                        <span class="rating"> ★★★★★</span>
+                        <span class="d-none d-md-inline">(4.8)</span>
+                    </td>
+                    <td data-label="Aksi">
+                        <a href="kontak.html">
+                            <button class="btn btn-sm btn-lyboo">
+                                <i class="fas fa-cart-plus"></i> <span class="d-none d-md-inline">Beli</span>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nomer">6</td>
+                    <td data-label="cover" class="cover">
+                        <img src="img/buku 12.jpg" alt="buku1" class="book-cover img-fluid">
+                    </td>
+                    <td data-label="Judul Buku">
+                        <div class="book-title">Winter in Tokyo</div>
+                        <div class="book-author">Ilana Tan</div>
+                    </td>
+                    <td data-label="Kategori">
+                        <span>Romansa</span>
+                    </td>
+                    <td data-label="Harga" class="price">Rp 71.100</td>
+                    <td data-label="Stok">
+                        <span class="badge bg-success text-dark stock-badge">Tersedia</span>
+                    </td>
+                    <td data-label="Rating">
+                        <span class="rating"> ★★★☆☆</span>
+                        <span class="d-none d-md-inline">(3.6)</span>
+                    </td>
+                    <td data-label="Aksi">
+                        <a href="kontak.html">
+                            <button class="btn btn-sm btn-lyboo">
+                                <i class="fas fa-cart-plus"></i> <span class="d-none d-md-inline">Beli</span>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nomer">7</td>
+                    <td data-label="cover" class="cover">
+                        <img src="img/buku5.jpeg" alt="buku1" class="book-cover img-fluid">
+                    </td>
+                    <td data-label="Judul Buku">
+                        <div class="book-title">Filosofi Teras</div>
+                        <div class="book-author">Henry Manampiring</div>
+                    </td>
+                    <td data-label="Kategori">
+                        <span>Pengembangan Diri</span>
+                    </td>
+                    <td data-label="Harga" class="price">Rp 97.700</td>
+                    <td data-label="Stok">
+                        <span class="badge bg-success text-dark stock-badge">Tersedia</span>
+                    </td>
+                    <td data-label="Rating">
+                        <span class="rating">★★★☆☆</span>
+                        <span class="d-none d-md-inline">(3.8)</span>
+                    </td>
+                    <td data-label="Aksi">
+                        <a href="kontak.html">
+                            <button class="btn btn-sm btn-lyboo">
+                                <i class="fas fa-cart-plus"></i> <span class="d-none d-md-inline">Beli</span>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nomer">8</td>
+                    <td data-label="cover" class="cover">
+                        <img src="img/buku 19.jpeg" alt="buku1" class="book-cover img-fluid">
+                    </td>
+                    <td data-label="Judul Buku">
+                        <div class="book-title">Dracula</div>
+                        <div class="book-author">Bram Stoker</div>
+                    </td>
+                    <td data-label="Kategori">
+                        <span>Superanatural Horor</span>
+                    </td>
+                    <td data-label="Harga" class="price">Rp.75.500</td>
+                    <td data-label="Stok">
+                        <span class="badge bg-warning text-dark stock-badge">Terbatas</span>
+                    </td>
+                    <td data-label="Rating">
+                        <span class="rating">★★☆☆☆</span>
+                        <span class="d-none d-md-inline">(2.5)</span>
+                    </td>
+                    <td data-label="Aksi">
+                        <a href="kontak.html">
+                            <button class="btn btn-sm btn-lyboo">
+                                <i class="fas fa-cart-plus"></i> <span class="d-none d-md-inline">Beli</span>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nomer">9</td>
+                    <td data-label="cover" class="cover">
+                        <img src="img/buku 15.jpeg" alt="buku1" class="book-cover img-fluid">
+                    </td>
+                    <td data-label="Judul Buku">
+                        <div class="book-title">A time to kill</div>
+                        <div class="book-author">John Grisham</div>
+                    </td>
+                    <td data-label="Kategori">
+                        <span>Hukum</span>
+                    </td>
+                    <td data-label="Harga" class="price">Rp.189.000</td>
+                    <td data-label="Stok">
+                        <span class="badge bg-success text-dark stock-badge">Tersedia</span>
+                    </td>
+                    <td data-label="Rating">
+                        <span class="rating">★★★☆☆</span>
+                        <span class="d-none d-md-inline">(3.2)</span>
+                    </td>
+                    <td data-label="Aksi">
+                        <a href="kontak.html">
+                            <button class="btn btn-sm btn-lyboo">
+                                <i class="fas fa-cart-plus"></i> <span class="d-none d-md-inline">Beli</span>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nomer">10</td>
+                    <td data-label="cover" class="cover">
+                        <img src="img/buku 3.jpg" alt="buku1" class="book-cover img-fluid">
+                    </td>
+                    <td data-label="Judul Buku">
+                        <div class="book-title">Bumi Manusia</div>
+                        <div class="book-author">Pramoedya Ananta Toer</div>
+                    </td>
+                    <td data-label="Kategori">
+                        <span>Sejarah</span>
+                    </td>
+                    <td data-label="Harga" class="price">Rp.78.750</td>
+                    <td data-label="Stok">
+                        <span class="badge bg-success text-dark stock-badge">Tersedia</span>
+                    </td>
+                    <td data-label="Rating">
+                        <span class="rating">★★★★☆</span>
+                        <span class="d-none d-md-inline">(4.7)</span>
+                    </td>
+                    <td data-label="Aksi">
+                        <a href="kontak.html">
+                            <button class="btn btn-sm btn-lyboo">
+                                <i class="fas fa-cart-plus"></i> <span class="d-none d-md-inline">Beli</span>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nomer">12</td>
+                    <td data-label="cover" class="cover">
+                        <img src="img/buku 14.jpeg" alt="buku1" class="book-cover img-fluid">
+                    </td>
+                    <td data-label="Judul Buku">
+                        <div class="book-title">An Introduction to Indonesia Law</div>
+                        <div class="book-author">Peter Mahmud Marzuki</div>
+                    </td>
+                    <td data-label="Kategori">
+                        <span>Hukum</span>
+                    </td>
+                    <td data-label="Harga" class="price">Rp.70.100</td>
+                    <td data-label="Stok">
+                        <span class="badge bg-success text-dark stock-badge">Tersedia</span>
+                    </td>
+                    <td data-label="Rating">
+                        <span class="rating"> ★★★★★</span>
+                        <span class="d-none d-md-inline">(5.0)</span>
+                    </td>
+                    <td data-label="Aksi">
+                        <a href="kontak.html">
+                            <button class="btn btn-sm btn-lyboo">
+                                <i class="fas fa-cart-plus"></i> <span class="d-none d-md-inline">Beli</span>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nomer">13</td>
+                    <td data-label="cover" class="cover">
+                        <img src="img/buku 18.jpeg" alt="buku1" class="book-cover img-fluid">
+                    </td>
+                    <td data-label="Judul Buku">
+                        <div class="book-title">Tantra Yoga</div>
+                        <div class="book-author">Setyo Hajar Dewantoro</div>
+                    </td>
+                    <td data-label="Kategori">
+                        <span>Spiritual</span>
+                    </td>
+                    <td data-label="Harga" class="price">Rp.135.000</td>
+                    <td data-label="Stok">
+                        <span class="badge bg-success text-dark stock-badge">Tersedia</span>
+                    </td>
+                    <td data-label="Rating">
+                        <span class="rating">★★★☆☆</span>
+                        <span class="d-none d-md-inline">(3.2)</span>
+                    </td>
+                    <td data-label="Aksi">
+                        <a href="kontak.html">
+                            <button class="btn btn-sm btn-lyboo">
+                                <i class="fas fa-cart-plus"></i> <span class="d-none d-md-inline">Beli</span>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nomer">14</td>
+                    <td data-label="cover" class="cover">
+                        <img src="img/buku 8.jpeg" alt="buku1" class="book-cover img-fluid">
+                    </td>
+                    <td data-label="Judul Buku">
+                        <div class="book-title">Gadis Kretek</div>
+                        <div class="book-author">Ratih Kumala</div>
+                    </td>
+                    <td data-label="Kategori">
+                        <span>Sejarah</span>
+                    </td>
+                    <td data-label="Harga" class="price">Rp.60.000</td>
+                    <td data-label="Stok">
+                        <span class="badge bg-warning text-dark stock-badge">Terbatas</span>
+                    </td>
+                    <td data-label="Rating">
+                        <span class="rating"> ★★★★★</span>
+                        <span class="d-none d-md-inline">(5.0)</span>
+                    </td>
+                    <td data-label="Aksi">
+                        <a href="kontak.html">
+                            <button class="btn btn-sm btn-lyboo">
+                                <i class="fas fa-cart-plus"></i> <span class="d-none d-md-inline">Beli</span>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nomer">15</td>
+                    <td data-label="cover" class="cover">
+                        <img src="img/buku 20.png" alt="buku1" class="book-cover img-fluid">
+                    </td>
+                    <td data-label="Judul Buku">
+                        <div class="book-title">Hell House</div>
+                        <div class="book-author">Richard Matheson</div>
+                    </td>
+                    <td data-label="Kategori">
+                        <span>Superanatural Horor</span>
+                    </td>
+                    <td data-label="Harga" class="price">Rp.55.000</td>
+                    <td data-label="Stok">
+                        <span class="badge bg-success text-dark stock-badge">Tersedia</span>
+                    </td>
+                    <td data-label="Rating">
+                        <span class="rating"> ★★★★★</span>
+                        <span class="d-none d-md-inline">(4.9)</span>
+                    </td>
+                    <td data-label="Aksi">
+                        <a href="kontak.html">
+                            <button class="btn btn-sm btn-lyboo">
+                                <i class="fas fa-cart-plus"></i> <span class="d-none d-md-inline">Beli</span>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nomer">16</td>
+                    <td data-label="cover" class="cover">
+                        <img src="img/buku 7.jpeg" alt="buku1" class="book-cover img-fluid">
+                    </td>
+                    <td data-label="Judul Buku">
+                        <div class="book-title">The Four Agreements</div>
+                        <div class="book-author">Don Miguel Ruiz</div>
+                    </td>
+                    <td data-label="Kategori">
+                        <span>Pengembangan Diri</span>
+                    </td>
+                    <td data-label="Harga" class="price">Rp.88.900</td>
+                    <td data-label="Stok">
+                        <span class="badge bg-success text-dark stock-badge">Tersedia</span>
+                    </td>
+                    <td data-label="Rating">
+                        <span class="rating">★★★★☆</span>
+                        <span class="d-none d-md-inline">(4.6)</span>
+                    </td>
+                    <td data-label="Aksi">
+                        <a href="kontak.html">
+                            <button class="btn btn-sm btn-lyboo">
+                                <i class="fas fa-cart-plus"></i> <span class="d-none d-md-inline">Beli</span>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nomer">17</td>
+                    <td data-label="cover" class="cover">
+                        <img src="img/buku 17.jpg" alt="buku1" class="book-cover img-fluid">
+                    </td>
+                    <td data-label="Judul Buku">
+                        <div class="book-title">The Third Eye</div>
+                        <div class="book-author">T. Lobsang Rampa</div>
+                    </td>
+                    <td data-label="Kategori">
+                        <span>Spiritual</span>
+                    </td>
+                    <td data-label="Harga" class="price">Rp.85.000</td>
+                    <td data-label="Stok">
+                        <span class="badge bg-success text-dark stock-badge">Tersedia</span>
+                    </td>
+                    <td data-label="Rating">
+                        <span class="rating"> ★★★★★</span>
+                        <span class="d-none d-md-inline">(5.0)</span>
+                    </td>
+                    <td data-label="Aksi">
+                        <a href="kontak.html">
+                            <button class="btn btn-sm btn-lyboo">
+                                <i class="fas fa-cart-plus"></i> <span class="d-none d-md-inline">Beli</span>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nomer">18</td>
+                    <td data-label="cover" class="cover">
+                        <img src="img/buku 9.jpg" alt="buku1" class="book-cover img-fluid">
+                    </td>
+                    <td data-label="Judul Buku">
+                        <div class="book-title">The Social Animal</div>
+                        <div class="book-author">Elliot Aranson</div>
+                    </td>
+                    <td data-label="Kategori">
+                        <span>Psikologi</span>
+                    </td>
+                    <td data-label="Harga" class="price">Rp.270.700</td>
+                    <td data-label="Stok">
+                        <span class="badge bg-warning text-dark stock-badge">Terbatas</span>
+                    </td>
+                    <td data-label="Rating">
+                        <span class="rating">★★★★☆</span>
+                        <span class="d-none d-md-inline">(4.5)</span>
+                    </td>
+                    <td data-label="Aksi">
+                        <a href="kontak.html">
+                            <button class="btn btn-sm btn-lyboo">
+                                <i class="fas fa-cart-plus"></i> <span class="d-none d-md-inline">Beli</span>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nomer">19</td>
+                    <td data-label="cover" class="cover">
+                        <img src="img/buku 16.jpeg" alt="buku1" class="book-cover img-fluid">
+                    </td>
+                    <td data-label="Judul Buku">
+                        <div class="book-title">Spiritual Gems of Islam</div>
+                        <div class="book-author">Imam Jamal Rahman</div>
+                    </td>
+                    <td data-label="Kategori">
+                        <span>Spiritual</span>
+                    </td>
+                    <td data-label="Harga" class="price">Rp.77.500</td>
+                    <td data-label="Stok">
+                        <span class="badge bg-danger text-dark stock-badge">Habis</span>
+                    </td>
+                    <td data-label="Rating">
+                        <span class="rating">★★★★☆</span>
+                        <span class="d-none d-md-inline">(4.8)</span>
+                    </td>
+                    <td data-label="Aksi">
+                        <a href="kontak.html">
+                            <button class="btn btn-sm btn-lyboo">
+                                <i class="fas fa-cart-plus"></i> <span class="d-none d-md-inline">Beli</span>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nomer">20</td>
+                    <td data-label="cover" class="cover">
+                        <img src="img/buku6.jpg" alt="buku1" class="book-cover img-fluid">
+                    </td>
+                    <td data-label="Judul Buku">
+                        <div class="book-title">Dilan 1990</div>
+                        <div class="book-author">Pidi Baiq</div>
+                    </td>
+                    <td data-label="Kategori">
+                        <span>Romansa</span>
+                    </td>
+                    <td data-label="Harga" class="price">Rp.173.000</td>
+                    <td data-label="Stok">
+                        <span class="badge bg-warning text-dark stock-badge">Terbatas</span>
+                    </td>
+                    <td data-label="Rating">
+                        <span class="rating"> ★★★★★</span>
+                        <span class="d-none d-md-inline">(5.0)</span>
+                    </td>
+                    <td data-label="Aksi">
+                        <a href="kontak.html">
+                            <button class="btn btn-sm btn-lyboo">
+                                <i class="fas fa-cart-plus"></i> <span class="d-none d-md-inline">Beli</span>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nomer">21</td>
+                    <td data-label="cover" class="cover">
+                        <img src="img/buku 2.jpg" alt="buku1" class="book-cover img-fluid">
+                    </td>
+                    <td data-label="Judul Buku">
+                        <div class="book-title">Laut Bercerita</div>
+                        <div class="book-author">Leila S. Chudori</div>
+                    </td>
+                    <td data-label="Kategori">
+                        <span>Sejarah</span>
+                    </td>
+                    <td data-label="Harga" class="price">Rp.97.700</td>
+                    <td data-label="Stok">
+                        <span class="badge bg-warning text-dark stock-badge">Terbatas</span>
+                    </td>
+                    <td data-label="Rating">
+                        <span class="rating"> ★★★★★</span>
+                        <span class="d-none d-md-inline">(4.9)</span>
+                    </td>
+                    <td data-label="Aksi">
+                        <a href="kontak.html">
+                            <button class="btn btn-sm btn-lyboo">
+                                <i class="fas fa-cart-plus"></i> <span class="d-none d-md-inline">Beli</span>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nomer">22</td>
+                    <td data-label="cover" class="cover">
+                        <img src="img/buku 11.jpg" alt="buku1" class="book-cover img-fluid">
+                    </td>
+                    <td data-label="Judul Buku">
+                        <div class="book-title">Ayat-ayat Cinta</div>
+                        <div class="book-author">Habiburrahman El Shirazy</div>
+                    </td>
+                    <td data-label="Kategori">
+                        <span>Romansa</span>
+                    </td>
+                    <td data-label="Harga" class="price">Rp.35.500</td>
+                    <td data-label="Stok">
+                        <span class="badge bg-danger text-dark stock-badge">Habis</span>
+                    </td>
+                    <td data-label="Rating">
+                        <span class="rating"> ★★★★★</span>
+                        <span class="d-none d-md-inline">(5.0)</span>
+                    </td>
+                    <td data-label="Aksi">
+                        <button class="btn btn-sm btn-lyboo">
+                            <i class="fas fa-cart-plus"></i><span class="d-none d-md-inline">Beli</span>
+                        </button>
+                    </td>
+                </tr>
+
+                
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <footer class="lyboo-footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <img src="img/logo lyboo.png" alt="Lyboo Store" class="footer-logo">
+                    <p>Membaca adalah investasi terbaik untuk masa depan</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Tentang Kami</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="profil.html">Profil</a></li>
+                        <li><a href="produk.html">Produk</a></li>
+                        <li><a href="katalog.html">Katalog</a></li>
+                        <li><a href="kontak.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                      <h4>Hubungi Kami</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i><span>@Lyboo_Store</span></a>
+                        <a href="https://www.facebook.com/?locale=id_ID"><i class="fab fa-facebook-f"></i><span>Official Lyboo Store</span></a>
+                        <a href="https://www.whatsapp.com/?lang=id"><i class="fab fa-whatsapp"></i><span>+62 838 4526 4043</span></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Membership</h4>
+                    <form class="membership-form" id="membershipForm">
+                        <input type="email" placeholder="Masukkan Email Anda" required>
+                        <input type="password" placeholder="Masukkan Pasword Anda" required>
+                        <button type="submit">Join <i class="fas fa-papper-plane"></i></button>
+                        <div class="form-message"></div>
+                    </form>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fab fa-cc-apple-pay"></i>
+                    </div>
+                    <p>&Copy; 2022 Lyboo Store. Semua hak dilindungi undang-undang.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

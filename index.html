@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="loading">
+        <div class="scene">
+            <div class="book" id="book">
+                <div class="book_cover"></div>
+                <div class="book_pages"></div>
+                <div class="book_cover book_cover--back"></div>
+            </div>
+            <p class="loading-text" id="loadingText">Membuka Buku...</p>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <img class="logo" src="img/logo lyboo.png" alt="logo lyboo">
+            <a class="navbar-brand">Lyboo Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="collapse navbar-collapse" id="navbarNav"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">index</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profil.html">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produk.html">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="katalog.html">Katalog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kontak.html">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+        
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="hero-section" style="background-image: url(img/ajakan.jpg);">
+                <a href="produk.html" class="btn submit-btn-slide">Shop Now</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="hero-section" style="background-image: url(img/promomo.jpg);">
+                <a href="produk.html" class="btn submit-btn-slide">Shop Now</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="hero-section" style="background-image: url(img/promo\ biasa.jpg);">
+                <a href="produk.html" class="btn submit-btn-slide">Shop Now</a>
+            </div>
+        </div>
+    </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Produk Best Seller</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <img src="img/buku 1.jpg" class="card-img-top" alt="Buku 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Cantik itu Luka</h5>
+                        <p class="card-text">Rp.95.000</p>
+                        <div class="product-details">
+                            <p>Buku ini memadukan unsur keluarga, romanasa, dan politik, yang telah menembus berbagai negara hingga diterjemahkan ke lebih dari 34 bahasa.</p>
+                            <p>Penulis: Eka Kurniawan</p>
+                            <p>Stok : 15</p>
+                            <a href="kontak.html" class="btn btn-primary">Beli Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <img src="img/buku 2.jpg" class="card-img-top" alt="Buku 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Laut Bercerita</h5>
+                        <p class="card-text">Rp.115.000</p>
+                        <div class="product-details">
+                            <p>Buku yang menerima penghargaan S.E.A Write Award tahun 2020 ini mengisahkan persahabatan, cinta, dan keluarga yang berhasil menggugah emosional pembaca</p>
+                            <p>Penulis: Leila. S Chudori</p>
+                            <p>Stok : 10 </p>
+                            <a href="kontak.html" class="btn btn-primary">Beli Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <img src="img/buku6.jpg" class="card-img-top" alt="Buku 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Dilan 1990</h5>
+                        <p class="card-text">Rp.173.000</p>
+                        <div class="product-details">
+                            <p>Buku Dilan 1990 menceritakan kisah cinta antara Dilan dan Milea, dua remaja di Bandung tahun 1990</p>
+                            <p>Penulis: Pidi Baiq</p>
+                            <p>Stok : 8</p>
+                            <a href="kontak.html" class="btn btn-primary">Beli Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </section>
+    
+    
+
+
+
+
+
+
+
+    <footer class="lyboo-footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <img src="img/logo lyboo.png" alt="Lyboo Store" class="footer-logo">
+                    <p>Membaca adalah investasi terbaik untuk masa depan</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Tentang Kami</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="profil.html">Profil</a></li>
+                        <li><a href="produk.html">Produk</a></li>
+                        <li><a href="katalog.html">Katalog</a></li>
+                        <li><a href="kontak.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                      <h4>Hubungi Kami</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i><span>@Lyboo_Store</span></a>
+                        <a href="https://www.facebook.com/?locale=id_ID"><i class="fab fa-facebook-f"></i><span>Official Lyboo Store</span></a>
+                        <a href="https://www.whatsapp.com/?lang=id"><i class="fab fa-whatsapp"></i><span>+62 838 4526 4043</span></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Membership</h4>
+                    <form class="membership-form" id="membershipForm">
+                        <input type="email" placeholder="Masukkan Email Anda" required>
+                        <input type="password" placeholder="Masukkan Pasword Anda" required>
+                        <button type="submit">Join <i class="fas fa-paper-plane"></i></button>
+                        <div class="form-message"></div>
+                    </form>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fab fa-cc-apple-pay"></i>
+                    </div>
+                    <p>&Copy; 2022 Lyboo Store. Semua hak dilindungi undang-undang.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
